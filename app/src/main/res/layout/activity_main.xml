@@ -11,6 +11,7 @@
     android:paddingTop="8dp"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tv_title"
         android:text="Clientes"

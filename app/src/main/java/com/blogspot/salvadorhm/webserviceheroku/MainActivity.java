@@ -1,9 +1,12 @@
 package com.blogspot.salvadorhm.webserviceheroku;
 
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import org.json.JSONArray;
@@ -19,17 +22,33 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv_clientes_list;
     private ArrayAdapter adapter;
-    private String getAllContactsURL = "http://ferreteriaacme.herokuapp.com/api_clientes?user_hash=1234&action=get";
+    private String url = "http://ferreteriaacme.herokuapp" +
+            ".com/api_clientes?user_hash=1234&action=get";
+    public static final String ID_CLIENTE = "1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
-        lv_clientes_list = (ListView)findViewById(R.id.lv_clientes_list);
+        lv_clientes_list = findViewById(R.id.lv_clientes_list);
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
         lv_clientes_list.setAdapter(adapter);
-        webServiceRest(getAllContactsURL);
+        webServiceRest(url);
+
+        lv_clientes_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Log.e("ITEM", lv_clientes_list.getItemAtPosition(position).toString());
+            String datos_cliente[] =
+                    lv_clientes_list.getItemAtPosition(position).toString().split(":");
+            String id_cliente = datos_cliente[0];
+            Log.e("ID_CLIENTE",id_cliente);
+                Intent i = new Intent(MainActivity.this, ActivityView.class);
+                i.putExtra(ID_CLIENTE,id_cliente);
+                startActivity(i);
+            }
+        });
     }
 
 
