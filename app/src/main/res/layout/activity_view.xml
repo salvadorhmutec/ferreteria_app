@@ -13,14 +13,15 @@
 
     <TextView
         android:id="@+id/tv_activity_title"
-        android:text="Detalle del Cliente"
+        android:text="@string/client_detail"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <ScrollView
+        android:layout_weight="0.8"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -32,56 +33,75 @@
 
     <TextView
         android:id="@+id/tv_id_cliente"
-        android:text="ID"
+        android:text="@string/id"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_id_cliente"
+        android:textColor="@color/colorAccent"
+        android:hint="@string/id"
         android:enabled="false"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_nombre"
-        android:text="Nombre"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_nombre"
+        android:hint="@string/name"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_apellido_paterno"
-        android:text="Apellido Paterno"
+        android:text="@string/father_last_name"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_apellido_paterno"
+        android:hint="@string/father_last_name"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_apellido_materno"
-        android:text="Apellido Materno"
+        android:text="@string/mother_last_name"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_apellido_materno"
+        android:hint="@string/mother_last_name"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <TextView
         android:id="@+id/tv_telefono"
-        android:text="Telefono"
+        android:text="@string/telephone"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_telefono"
+        android:hint="@string/telephone"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
         android:inputType="phone"
         android:layout_width="match_parent"
@@ -90,65 +110,86 @@
 
     <TextView
         android:id="@+id/tv_calle"
-        android:text="Calle"
+        android:text="@string/street"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_calle"
+        android:hint="@string/street"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <TextView
         android:id="@+id/tv_colonia"
-        android:text="Colonia"
+        android:text="@string/colony"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_colonia"
+        android:hint="@string/colony"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_municipio"
-        android:text="Municipio"
+        android:text="@string/town"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_municipio"
+        android:hint="@string/town"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <TextView
         android:id="@+id/tv_longitud"
-        android:text="Longitud"
+        android:text="@string/longitude"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_longitud"
+        android:hint="@string/longitude"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <TextView
         android:id="@+id/tv_latitud"
-        android:text="Latitud"
+        android:text="@string/latitude"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et_latitud"
+        android:hint="@string/latitude"
+        android:textColor="@color/colorAccent"
         android:enabled="false"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_imagen"
-        android:text="Imagen"
+        android:text="@string/image"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -160,5 +201,27 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_editar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/btn_borrar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/delete" />
+    </LinearLayout>
 
 </LinearLayout>

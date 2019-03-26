@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         lv_clientes_list = findViewById(R.id.lv_clientes_list);
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
+        adapter = new ArrayAdapter(this, R.layout.cliente_item);
         lv_clientes_list.setAdapter(adapter);
         webServiceRest(url);
 
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 longitud = jsonObject.getString("longitud");
                 latitud = jsonObject.getString("latitud");
                 imagen = jsonObject.getString("imagen");
-                adapter.add(id_cliente + ":" + nombre + " " + apellido_paterno);
+                adapter.add(id_cliente + ":" + nombre + " " + apellido_paterno + " " + apellido_materno);
             }catch (JSONException e){
                 Log.e("Error 102",e.getMessage());
             }

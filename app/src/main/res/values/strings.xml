@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Webservice Heroku</string>
+    <string name="client_detail">Detalle del Cliente</string>
+    <string name="id">ID</string>
+    <string name="name">Nombre</string>
+    <string name="father_last_name">Apellido Paterno</string>
+    <string name="mother_last_name">Apellido Materno</string>
+    <string name="telephone">Telefono</string>
+    <string name="street">Calle</string>
+    <string name="colony">Colonia</string>
+    <string name="town">Municipio</string>
+    <string name="longitude">Longitud</string>
+    <string name="latitude">Latitud</string>
+    <string name="image">Imagen</string>
+    <string name="update">Actualizar</string>
+    <string name="delete">Borrar</string>
+    <string name="insert">Insertar</string>
 </resources>
