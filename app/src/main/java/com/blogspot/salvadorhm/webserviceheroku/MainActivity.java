@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv_clientes_list;
     private ArrayAdapter adapter;
-    private String url = "http://ferreteriaacme.herokuapp" +
+    private String url = "https://ferreteriaacme.herokuapp" +
             ".com/api_clientes?user_hash=1234&action=get";
     public static final String ID_CLIENTE = "1";
 
@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void activityInsertOnClick(View view){
+        Intent i = new Intent(MainActivity.this,ActivityInsert.class);
+        startActivity(i);
+    }
 
     private void webServiceRest(String requestURL){
         try{

@@ -15,4 +15,6 @@
     <string name="update">Actualizar</string>
     <string name="delete">Borrar</string>
     <string name="insert">Insertar</string>
+    <string name="insert_client">Insertar Cliente</string>
+    <string name="state">Estado</string>
 </resources>

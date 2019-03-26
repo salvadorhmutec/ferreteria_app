@@ -139,6 +139,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+     <TextView
+        android:id="@+id/tv_estado"
+        android:text="@string/state"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_estado"
+        android:hint="@string/state"
+        android:textColor="@color/colorAccent"
+        android:enabled="false"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/tv_municipio"
         android:text="@string/town"

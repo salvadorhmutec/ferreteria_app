@@ -33,6 +33,7 @@ public class ActivityView extends AppCompatActivity {
     EditText et_telefono;
     EditText et_calle;
     EditText et_colonia;
+    EditText et_estado;
     EditText et_municipio;
     EditText et_longitud;
     EditText et_latidud;
@@ -40,8 +41,9 @@ public class ActivityView extends AppCompatActivity {
 
 
 
-    private String webservice_url = "http://ferreteriaacme.herokuapp" +
+    private String webservice_url = "https://ferreteriaacme.herokuapp" +
             ".com/api_clientes?user_hash=1234&action=get&id_cliente=";
+
 
     private String images_url = "http://ferreteriaacme.herokuapp" +
             ".com/static/files/";
@@ -58,6 +60,7 @@ public class ActivityView extends AppCompatActivity {
         et_telefono = findViewById(R.id.et_telefono);
         et_calle = findViewById(R.id.et_calle);
         et_colonia = findViewById(R.id.et_colonia);
+        et_estado = findViewById(R.id.et_estado);
         et_municipio = findViewById(R.id.et_municipio);
         et_longitud = findViewById(R.id.et_longitud);
         et_latidud = findViewById(R.id.et_latitud);
@@ -97,6 +100,7 @@ public class ActivityView extends AppCompatActivity {
         String telefono;
         String calle;
         String colonia;
+        String estado;
         String municipio;
         String longitud;
         String latitud;
@@ -117,6 +121,7 @@ public class ActivityView extends AppCompatActivity {
                 telefono = jsonObject.getString("telefono");
                 calle = jsonObject.getString("calle");
                 colonia = jsonObject.getString("colonia");
+                estado = jsonObject.getString("estado");
                 municipio = jsonObject.getString("municipio");
                 longitud = jsonObject.getString("longitud");
                 latitud = jsonObject.getString("latitud");
@@ -130,6 +135,7 @@ public class ActivityView extends AppCompatActivity {
                 et_telefono.setText(telefono);
                 et_calle.setText(calle);
                 et_colonia.setText(colonia);
+                et_estado.setText(estado);
                 et_municipio.setText(municipio);
                 et_longitud.setText(longitud);
                 et_latidud.setText(latitud);
